@@ -1,6 +1,19 @@
-/*
+const APIURL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
+const IMGPATH = 'https://image.tmdb.org/t/p/w1280';
 
-Since our theme.js file is minified with gulp, if you do not have a situation to run gulp after the project is published.
-We can add our external javascript codes here. but remember this place is not minified.
+async function getMovies() {
+    const resp = await fetch(APIURL);
+    const respData = await resp.json();
+      
+    console.log(respData);
 
-*/
+    respData.results.forEach(movie => {
+        const img = document.createElement('img');
+        img.src = IMGPATH + movie.poster_path;
+        document.body.appendChild(img);
+    });
+
+    return respData;
+}
+
+getMovies();
