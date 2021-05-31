@@ -1,1 +1,42 @@
+@import "variables.scss";
 // We write all scss codes related to website content here
+
+
+.movies.section{
+    .movie-list{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        .movie{
+            width:240px;
+            border-radius:3px;
+            box-shadow:0px 4px 5px rgba(0,0,0,0.2);
+            background-color:#373b69;
+            margin:1rem;
+            img{
+                width:100%;
+                
+            }
+            .movie-info{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                padding:1rem;
+                *{
+                    color:#eee;
+                    letter-spacing:1px;
+                }
+                h3{
+                    margin:0;
+                    font-size:$f-size-4;
+                }
+                span{
+                    background-color:#22254b;
+                    padding:0.25rem 0.5rem;
+                    border-radius:3px;
+                }
+            }
+        }
+    }
+    
+}
