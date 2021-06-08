@@ -24,6 +24,10 @@ async function getMovies() {
     });
 
     return respData;
+
+    
 }
+
+console.log(respData);
 
 getMovies();
